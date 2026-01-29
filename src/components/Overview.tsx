@@ -1,6 +1,6 @@
 import { DataContext } from '@/context/dataContext';
-
 import { useContext } from "react"
+import { SimpleAreaChart } from './SimpleAreaChart';
 
 export default function Overview() {
   const data = useContext(DataContext)
@@ -8,9 +8,10 @@ export default function Overview() {
   const [overviewData] = data.filter(d => d.id === 'overview')
 
   return <div>
-    <div className="grid grid-cols-3 gap-7">
+    <div className="grid grid-cols-12 gap-7">
+      {/* cards */}
       {overviewData.data.map(d => (
-        <div key={d.label} className="card bg-primary col-span-1 border border-border rounded-2xl p-7 flex gap-5 justify-between">
+        <div key={d.label} className="card bg-primary col-span-4 border border-border rounded-2xl p-7 flex gap-5 justify-between">
         <div className="card-text flex flex-col gap-3">
           <p className="text-sm text-[#90A1B9]">{d.label}</p>
           <p className="text-3xl text-white">{d.value}</p>
@@ -20,7 +21,70 @@ export default function Overview() {
           <img src={d.icon} alt="" />
         </div>
       </div>
-      ))}      
+      ))} 
+
+      {/* Chart */}
+      <div className='p-6 rounded-2xl border border-border col-span-12 bg-primary'>
+        <h3 className='text-xl'>Call Trends - This Week</h3>
+        <p className='text-sm text-[#90A1B9] mb-6'>Total: 472 calls</p>
+        <SimpleAreaChart></SimpleAreaChart>
+      </div>
+
+      {/* activity */}
+      <div className='p-8 bg-primary rounded-2xl col-span-6 border border-border'>
+        <h3 className='text-xl mb-5'>Recent Activity</h3>
+        {/* card container */}
+        <div className='flex flex-col gap-3'>
+          {/* card */}
+          <div className='bg-[#1D293D80] rounded-md px-3 py-4 flex gap-5'>
+            <span className='w-2 h-2 rounded-2xl bg-green-400 block mt-2'></span>
+            <div>
+              <p>AI booked appointment for iPhone 13 screen repair</p>
+              <span className='text-sm text-[#90A1B9]'>2 min ago</span>
+            </div>
+          </div>
+          {/* card */}
+          <div className='bg-[#1D293D80] rounded-md px-3 py-4 flex gap-5'>
+            <span className='w-2 h-2 rounded-2xl bg-orange-400 block mt-2'></span>
+            <div>
+              <p>Warm transfer to technician - Software issue</p>
+              <span className='text-sm text-[#90A1B9]'>5 min ago</span>
+            </div>
+          </div>
+          {/* card */}
+          <div className='bg-[#1D293D80] rounded-md px-3 py-4 flex gap-5'>
+            <span className='w-2 h-2 rounded-2xl bg-green-400 block mt-2'></span>
+            <div>
+              <p>Quote provided for iPad battery replacement</p>
+              <span className='text-sm text-[#90A1B9]'>8 min ago</span>
+            </div>
+          </div>
+          {/* card */}
+          <div className='bg-[#1D293D80] rounded-md px-3 py-4 flex gap-5'>
+            <span className='w-2 h-2 rounded-2xl bg-red-400 block mt-2'></span>
+            <div>
+              <p>Call dropped after 12 seconds</p>
+              <span className='text-sm text-[#90A1B9]'>15 min ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* repair */}
+      <div className='p-8 bg-primary rounded-2xl col-span-6 border border-border'>
+        <h3>Top Repair Requests</h3>
+        {/* range card container */}
+        <div>
+          {/* range card */}
+          <div className='grid grid-cols-12'>
+            <span className='col-span-6 inline-block'>Screen Repair</span>
+            <span className='col-span-6 inline-block'>156 requests</span>
+            <input className='col-span-12' type="range"></input>
+          </div>
+        </div>
+      </div>
     </div>
+
+      
   </div>
 }

@@ -1,6 +1,7 @@
 import { menuItems } from '@/data/menuItems'
 import logo from '../assets/Container.png'
 import { cn } from '@/lib/utils'
+import logoutIcon from '../assets/logout-icon.png'
 
 
 export default function Sidebar({activeTab, setActiveTab }) {
@@ -24,5 +25,11 @@ export default function Sidebar({activeTab, setActiveTab }) {
         </button>
         ))}
       </div>
+
+      {/* logout */}
+      <button className="flex items-center gap-3 px-1 py-2 rounded-3xl hover:bg-secondary bg-primary mt-auto mb-8 self-start">
+          <img src={logoutIcon} alt='logout' className='w-8 h-8'/>
+          <span className='text-white'>Logout</span>
+        </button>
     </aside> 
 )}
