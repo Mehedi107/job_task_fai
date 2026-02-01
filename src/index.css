@@ -66,3 +66,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.range-hidden-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.range-hidden-thumb::-moz-range-thumb {
+  display: none;
+}
+
+.range-hidden-thumb::-ms-thumb {
+  display: none;
+}

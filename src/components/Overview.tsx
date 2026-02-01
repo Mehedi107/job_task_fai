@@ -64,7 +64,7 @@ export default function Overview() {
             <span className='w-2 h-2 rounded-2xl bg-red-400 block mt-2'></span>
             <div>
               <p>Call dropped after 12 seconds</p>
-              <span className='text-sm text-[#90A1B9]'>15 min ago</span>
+              <span className='text-sm text-tertiary'>15 min ago</span>
             </div>
           </div>
         </div>
@@ -72,14 +72,32 @@ export default function Overview() {
 
       {/* repair */}
       <div className='p-8 bg-primary rounded-2xl col-span-6 border border-border'>
-        <h3>Top Repair Requests</h3>
+        <h3 className='text-xl mb-5'>Top Repair Requests</h3>
         {/* range card container */}
-        <div>
+        <div className='flex flex-col gap-4'>
           {/* range card */}
-          <div className='grid grid-cols-12'>
+          <div className='grid grid-cols-12 gap-y-3'>
             <span className='col-span-6 inline-block'>Screen Repair</span>
-            <span className='col-span-6 inline-block'>156 requests</span>
-            <input className='col-span-12' type="range"></input>
+            <span className='col-span-6 inline-block justify-self-end text-tertiary'>156 requests</span>
+            <input className='range-hidden-thumb col-span-12 disabled' value={80} type="range"></input>
+          </div>
+          {/* range card */}
+          <div className='grid grid-cols-12 gap-y-3'>
+            <span className='col-span-6 inline-block'>Battery Replacement</span>
+            <span className='col-span-6 inline-block justify-self-end text-tertiary'>89 requests</span>
+            <input className='range-hidden-thumb col-span-12 disabled' value={33} type="range"></input>
+          </div>
+          {/* range card */}
+          <div className='grid grid-cols-12 gap-y-3'>
+            <span className='col-span-6 inline-block'>Back Glass Repair</span>
+            <span className='col-span-6 inline-block justify-self-end text-tertiary'>63 requests</span>
+            <input className='range-hidden-thumb col-span-12 disabled' value={25} type="range"></input>
+          </div>
+          {/* range card */}
+          <div className='grid grid-cols-12 gap-y-3'>
+            <span className='col-span-6 inline-block'>Software Issues</span>
+            <span className='col-span-6 inline-block justify-self-end text-tertiary'>45 requests</span>
+            <input className='range-hidden-thumb col-span-12 disabled' value={20} type="range"></input>
           </div>
         </div>
       </div>
