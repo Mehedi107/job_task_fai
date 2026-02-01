@@ -116,7 +116,7 @@ export const dashboardData = [
           status: "AI Resolved",
           statusType: "success",
         },
-      ]
+      ],
     }
   },
   {
