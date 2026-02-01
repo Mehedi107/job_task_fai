@@ -1,5 +1,5 @@
 import { menuItems } from '@/data/menuItems';
-import avatar from '../assets/Avatar Style 6.png'
+import avatar from '../assets/avatar.png'
 import notificationIcon from '../assets/notifications_none.png'
 
 export default function Header({activeTab}: {activeTab: string | number}) {

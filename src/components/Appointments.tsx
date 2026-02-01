@@ -64,7 +64,7 @@ export default function Appointments() {
     <div className="overflow-hidden rounded-xl border border-border bg-primary backdrop-blur-sm col-span-12">
           <table className="w-full border-collapse table-auto text-center">
             <thead>
-              <tr className="border-b border-slate-800 text-slate-400 text-sm uppercase tracking-wider">
+              <tr className="border-b border-border text-slate-400 text-sm uppercase tracking-wider">
                 <th className="px-6 py-5 font-medium">Client Name</th>
                 <th className="px-6 py-5 font-medium">Client Phone</th>
                 <th className="px-6 py-5 font-medium">Client Mail</th>
@@ -75,7 +75,7 @@ export default function Appointments() {
                 <th className="px-6 py-5 font-medium">Start Time</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/50">
+            <tbody className="divide-y divide-border/50">
               {tableData.map((row, idx) => (
                 <tr key={idx} className="hover:bg-blue-600/5 transition-colors group">
                   <td className="px-6 py-4 text-blue-400 font-medium cursor-pointer hover:underline">
