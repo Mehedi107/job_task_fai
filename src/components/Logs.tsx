@@ -4,6 +4,7 @@ import clockIcon from "../assets/clock.png";
 import playIcon from "../assets/play-icon.png";
 import checkedIcon from "../assets/checked.png";
 import bookIcon from "../assets/book-icon.png";
+import searchIcon from "../assets/search-icon.png";
 import { cn } from "@/lib/utils";
 import { statusVariants} from '../data/dashboardData'
 
@@ -21,11 +22,12 @@ export default function Logs() {
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 
           {/* Search */}
-          <div className="relative w-full md:max-w-md">
+          <div className="relative w-full md:max-w-md flex items-center bg-primary border border-border rounded-lg px-8">
+            <img className=" mr-3" src={searchIcon} alt="" />
             <input
               type="text"
               placeholder="Search by phone number, issue type..."
-              className="w-full rounded-lg border border-border bg-primary px-8 py-4 text-white placeholder-tertiary outline-none"
+              className="w-full py-4 text-white placeholder-tertiary outline-none"
             />
           </div>
 
