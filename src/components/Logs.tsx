@@ -15,7 +15,7 @@ export default function Logs() {
   const { title, lists } = overviewData.data;
 
   return (
-    <div className="grid grid-cols-12 gap-6">
+    <div className="grid grid-cols-12 gap-6 items-start">
       
       {/* Header */}
       <div className="col-span-12">
@@ -101,15 +101,15 @@ export default function Logs() {
               </div>
 
               <div className="mt-5 flex gap-5 items-center">
-                <span className="flex gap-2 items-center text-tertiary">
+                <span className="flex gap-2 items-center text-tertiary text-sm">
                   <img src={clockIcon} alt="" /> {list.duration}
                 </span>
 
-                <span className="flex gap-2 items-center text-tertiary">
+                <span className="flex gap-2 items-center text-tertiary text-sm">
                   <img src={checkedIcon} alt="" /> {list.status}
                 </span>
 
-                <span className="text-xs text-[#51A2FF] inline-block px-3 py-1 bg-[#51A2FF]/30 rounded-sm">
+                <span className="text-xs text-[#51A2FF] inline-block px-3 py-1 bg-[#51A2FF]/15 rounded-sm">
                   {list.category}
                 </span>
               </div>
@@ -127,7 +127,7 @@ export default function Logs() {
           {/* call summery */}
           <div className="grid grid-cols-2 gap-6">
             <div className="col-span-1 p-2">
-              <p className="text-sm text-tertiary">Phone Number</p>
+              <p className="text-sm text-tertiary mb-2">Phone Number</p>
               <p>+1 (555) 123-4567</p>
             </div>
 
