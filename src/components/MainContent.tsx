@@ -17,7 +17,7 @@ export default function MainContent({activeTab}: {activeTab: string | number}) {
 
     const Component = tabComponents[menuItem.id] || null
   
-  return <main id="main" className="p-8 flex-1 bg-secondary">
+  return <main id="main" className="p-6 flex-1 bg-secondary">
           {Component && <Component />}
         </main>
 }

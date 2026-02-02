@@ -60,7 +60,7 @@ export const SimpleAreaChart = () => {
         bottom: 0,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid strokeDasharray="5 5" stroke="#343a40" />
       <XAxis dataKey="name" />
       <YAxis width="auto" />
       <Tooltip />

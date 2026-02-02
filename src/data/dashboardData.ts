@@ -15,28 +15,28 @@ export const dashboardData = [
       {
         label: 'Total Calls Today',
         value: '127',
-        percentage: 12, 
+        percentage: +12, 
         trend: 'up',
         icon: icon1
       },
       {
         label: 'AI-Handled Calls',
         value: '98',
-        percentage: 77, 
+        percentage: +77, 
         trend: 'up',
         icon: icon2
       },
       {
         label: 'Warm Transfer',
         value: '23',
-        percentage: 18, 
+        percentage: +18, 
         trend: 'up',
         icon: icon3
       },
       {
         label: 'Appointments Booked',
         value: '34',
-        percentage: 8, 
+        percentage: +8, 
         trend: 'up',
         icon: icon4
       },
@@ -50,7 +50,7 @@ export const dashboardData = [
       {
         label: 'Avg Call Duration',
         value: '3:42',
-        percentage: 15, 
+        percentage: +15, 
         trend: 'up',
         icon: icon6
       }

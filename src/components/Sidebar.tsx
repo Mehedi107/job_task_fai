@@ -15,7 +15,7 @@ export default function Sidebar({activeTab, setActiveTab }) {
       <div className='px-2 py-4 flex flex-col gap-7'>
         {menuItems.map(item => (
           <button key={item.id} onClick={() => setActiveTab(item.id)} className={cn(
-              "flex items-center gap-3 px-1 py-2 rounded-3xl bg-amber-400 hover:bg-secondary",
+              "flex items-center gap-3 px-1 py-2 rounded-3xl hover:bg-secondary border-none",
               activeTab === item.id
                 ? "bg-secondary"
                 : "bg-primary"
