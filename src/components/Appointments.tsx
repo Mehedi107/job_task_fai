@@ -38,7 +38,7 @@ export default function Appointments() {
         <span className="text-tertiary text-sm">AI Booked</span>
       </div>
       <h3 className="text-2xl">28</h3>
-      <p className="text-sm text-[#05DF72]">82% of total</p>
+      <p className="text-sm text-tertiary">82% of total</p>
     </div>
 
     {/* card */}
@@ -48,7 +48,7 @@ export default function Appointments() {
         <span className="text-tertiary text-sm">Pending</span>
       </div>
       <h3 className="text-2xl">3</h3>
-      <p className="text-sm text-[#05DF72]">Awaiting confirmation</p>
+      <p className="text-sm text-tertiary">Awaiting confirmation</p>
     </div>
 
     {/* url container */}
@@ -65,14 +65,14 @@ export default function Appointments() {
           <table className="w-full border-collapse table-auto text-center">
             <thead>
               <tr className="border-b border-border text-slate-400 text-sm uppercase tracking-wider">
-                <th className="px-6 py-5 font-medium">Client Name</th>
-                <th className="px-6 py-5 font-medium">Client Phone</th>
-                <th className="px-6 py-5 font-medium">Client Mail</th>
-                <th className="px-6 py-5 font-medium">Device</th>
-                <th className="px-6 py-5 font-medium">Repair Type</th>
-                <th className="px-6 py-5 font-medium">Date</th>
-                <th className="px-6 py-5 font-medium">Slot No</th>
-                <th className="px-6 py-5 font-medium">Start Time</th>
+                <th className="px-6 py-6 font-medium">Client Name</th>
+                <th className="px-6 py-6 font-medium">Client Phone</th>
+                <th className="px-6 py-6 font-medium">Client Mail</th>
+                <th className="px-6 py-6 font-medium">Device</th>
+                <th className="px-6 py-6 font-medium">Repair Type</th>
+                <th className="px-6 py-6 font-medium">Date</th>
+                <th className="px-6 py-6 font-medium">Slot No</th>
+                <th className="px-6 py-6 font-medium">Start Time</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border/50">
