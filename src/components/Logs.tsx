@@ -15,14 +15,14 @@ export default function Logs() {
   const { title, lists } = overviewData.data;
 
   return (
-    <div className="grid grid-cols-12 gap-7">
+    <div className="grid grid-cols-12 gap-6">
       
       {/* Header */}
       <div className="col-span-12">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
 
           {/* Search */}
-          <div className="relative w-full md:max-w-md flex items-center bg-primary border border-border rounded-lg px-8">
+          <div className="relative w-full md:max-w-md flex items-center bg-primary border border-border rounded-xl px-8">
             <img className=" mr-3" src={searchIcon} alt="" />
             <input
               type="text"
@@ -33,23 +33,48 @@ export default function Logs() {
 
           {/* Filters */}
           <div className="flex flex-wrap gap-3">
-            <select className="bg-primary px-8 py-4 pr-6 rounded-lg border border-border">
-              <option>All Type</option>
-              <option>Inbound</option>
-              <option>Outbound</option>
-            </select>
+            {/* button */}
+            <div className="relative w-fit">
+              <select
+                className="focus:outline-none bg-primary px-8 py-4 pr-12 rounded-xl border border-border appearance-none"
+              >
+                <option>All Type</option>
+                <option>Inbound</option>
+                <option>Outbound</option>
+              </select>
 
-            <select className="bg-primary px-8 py-4 pr-6 rounded-lg border border-border">
-              <option>All Issues</option>
-              <option>Screen Repair</option>
-              <option>Battery</option>
-            </select>
+              <span className="text-2xl rotate-90 pointer-events-none absolute right-6 top-1/2 -translate-y-1/2">
+              ›
+              </span>
+            </div>
+            {/* button */}
+            <div className="relative w-fit">
+              <select
+                className="focus:outline-none bg-primary px-8 py-4 pr-12 rounded-xl border border-border appearance-none"
+              >
+                <option>All Issues</option>
+                <option>Inbound</option>
+                <option>Outbound</option>
+              </select>
 
-            <select className="bg-primary px-8 py-4 pr-6 rounded-lg border border-border">
-              <option>Today</option>
-              <option>Last 7 Days</option>
-              <option>Last 30 Days</option>
-            </select>
+              <span className="text-2xl rotate-90 pointer-events-none absolute right-6 top-1/2 -translate-y-1/2">
+              ›
+              </span>
+            </div>
+            {/* button */}
+            <div className="relative w-fit">
+              <select
+                className="focus:outline-none bg-primary px-8 py-4 pr-12 rounded-xl border border-border appearance-none"
+              >
+                <option>Today</option>
+                <option>Inbound</option>
+                <option>Outbound</option>
+              </select>
+
+              <span className="text-2xl rotate-90 pointer-events-none absolute right-6 top-1/2 -translate-y-1/2">
+              ›
+              </span>
+            </div>
           </div>
         </div>
       </div>
